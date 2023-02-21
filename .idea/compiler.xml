@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="12">
-      <module name="Kafka-Kafka-with-Java-Streams" target="12" />
+      <module name="Kafka-Kafka-with-Java-Streams" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
