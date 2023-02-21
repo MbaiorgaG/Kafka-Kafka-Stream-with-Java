@@ -1,10 +1,13 @@
 package com.sdl.kafkastream;
 
+import com.sdl.kafkastream.model.Employee;
 import com.sdl.kafkastream.producer.KafkaStreamProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.time.LocalDate;
 
 @SpringBootApplication
 public class KafkaStreamApplication implements CommandLineRunner {
@@ -17,6 +20,8 @@ public class KafkaStreamApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		kafkaStreamProducer.produceMessage("Hello this kafka message has been sent across");
+		for(int i =0; i< 10; i++){
+			kafkaStreamProducer.produceMessage(new Employee(i, "Employee "+ i, LocalDate.now()));
+		}
 	}
 }
