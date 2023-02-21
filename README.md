@@ -1,2 +1,2 @@
-# Kafka & Kafka Stream-with-Java-Streams ( Producer)
+# Kafka & Kafka Stream ( Producer)
 Kafka streams course from Udemy .
